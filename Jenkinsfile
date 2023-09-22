@@ -5,8 +5,8 @@ pipeline {
   
   stages {
     stage('Install Nginx on Worker Node') {
-      steps {
-        sharedliberary.call('Worker1')
+           script {
+          sharedliberary.call('Worker1')
       }
     }
   }
