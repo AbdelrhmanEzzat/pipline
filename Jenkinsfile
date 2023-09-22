@@ -1,5 +1,13 @@
-@Library('sharedliberary')_
- stage('Demo') {
-     echo 'Hello world'
-     bye 'Alex'
- }
+@Library('sharedliberary') _
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Install Nginx') {
+            steps {
+                installNginx()
+            }
+        }
+    }
+}
