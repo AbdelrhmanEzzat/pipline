@@ -2,7 +2,6 @@
 
 stage('Demo') {
     steps {
-        echo 'Hello world'
-        call()
+       installNginx
     }
 }
