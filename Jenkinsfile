@@ -3,11 +3,7 @@
 pipeline {
   agent any
   
-  stages {
-    stage('Install Nginx on Worker Node') {
-           script {
-          sharedliberary.call('Worker1')
-      }
-    }
-  }
-}
+stage('Demo') {
+     echo 'Hello world'
+     installNginx 
+ }
