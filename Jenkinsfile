@@ -1,5 +1,21 @@
-@Library('sharedliberary')_
- stage('Demo') {
-     echo 'Hello world'
-     sayHello 'Alex'
- }
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'BUILD'
+            }
+        }
+        stage('TEST') {
+            steps {
+                echo 'TEST'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy'
+            }
+        }        
+    }
+}
