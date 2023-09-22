@@ -3,7 +3,13 @@
 pipeline {
   agent any
   
-stage('Demo') {
-     echo 'Hello world'
-     installNginx 
- }
+  stages {
+    stage('Install Nginx on Worker Node') {
+      steps {
+        script {
+          mySharedLibrary.call('Worker1')
+        }
+      }
+    }
+  }
+}
