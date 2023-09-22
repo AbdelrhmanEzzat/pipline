@@ -1,7 +1,7 @@
 @Library('sharedliberary')_
 
 stage('Demo') {
-    steps {
+    script {
        installNginx
     }
 }
