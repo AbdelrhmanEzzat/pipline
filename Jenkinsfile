@@ -1,5 +1,8 @@
 @Library('sharedliberary')_
- stage('Demo') {
-     echo 'Hello world'
-     call()
- }
+
+stage('Demo') {
+    steps {
+        echo 'Hello world'
+        call()
+    }
+}
